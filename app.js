@@ -7,6 +7,7 @@ const pointButton = document.getElementById("point");
 const screenTop = document.querySelector(".screen-top");
 const screenBottom = document.querySelector(".screen-bottom");
 
+let windowSize = 0;
 let operandA = "";
 let operandB = "";
 let operation = null;
@@ -85,7 +86,7 @@ function operate(operator, num1, num2) {
     case "×":
       return multiply(num1, num2);
     case "÷":
-      if (b === 0) return null;
+      if (num2 === 0) return null;
       else return divide(num1, num2);
     default:
       return null;
